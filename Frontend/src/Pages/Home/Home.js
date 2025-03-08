@@ -1,19 +1,21 @@
-import "./home.css";
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import { addTransaction, getTransactions } from "../../utils/ApiRequest";
-import Spinner from "../../components/Spinner";
-import TableData from "./TableData";
-import Analytics from "./Analytics";
 import { useNavigate } from "react-router-dom";
 import { Button, Modal, Form, Container } from "react-bootstrap";
+// import loading from "../../assets/loader.gif";
+import "./home.css";
+import { addTransaction, getTransactions } from "../../utils/ApiRequest";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "../../components/Spinner";
+import TableData from "./TableData";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import BarChartIcon from "@mui/icons-material/BarChart";
+import Analytics from "./Analytics";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -185,7 +187,7 @@ const Home = () => {
       ) : (
         <>
           <Container
-            style={{ position: "relative", zIndex: "2 !important", backgroundColor:'black'  }}
+            style={{ position: "relative", zIndex: "2 !important" }}
             className="mt-3"
           >
             <div className="filterRow">
@@ -215,7 +217,7 @@ const Home = () => {
                   >
                     <option value="all">All</option>
                     <option value="expense">Expense</option>
-                    <option value="credit">Income</option>
+                    <option value="credit">Earned</option>
                   </Form.Select>
                 </Form.Group>
               </div>
