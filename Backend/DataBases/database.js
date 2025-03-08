@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 
 export const connectDB = async (req, res) => {
-    //mongo server url
-    const url = "mongodb://127.0.0.1:27017/finmanager";
+    const db = process.env.MONGO_URL;
 
-    const {connection} = await mongoose.connect(url);
+    const {connection} = await mongoose.connect(db, { useNewUrlParser: true });
 
-    console.log(`MongoDB Connection successful to ${connection.host}`);
+    console.log(`MongoDB Connected to ${connection.host}`);
 
 }
