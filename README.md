@@ -1,31 +1,42 @@
+# 💰 Personal Finance Manager
 
-# Personal Finance Manager
+## 🚀 Overview
 
-This is a **Personal Finance Manager** application built using **MERN stack** (MongoDB, Express.js, React.js, Node.js). It allows users to register, log in, and manage their financial transactions.
+The **Personal Finance Manager** is a robust full-stack web application designed to help users gain better control over their personal finances. This application allows users to monitor their income, track expenses, and analyze their overall financial health. Built using **React.js** for the frontend and **Node.js** for the backend, with **MongoDB** serving as the database, it ensures smooth and secure financial management.
 
-## Features
+## ✨ Features
 
-- User Authentication (Register/Login)
-- Add, Edit, Delete Transactions
-- Visual Analytics for Expenses
-- Avatar selection for users
-- Responsive Design
-- Real-time Data Fetching
+- ✅ **User Authentication:** Secure registration and login functionality.
+- ✅ **Expense Tracking:** Track daily expenses with category segmentation.
+- ✅ **Income Management:** Log and manage multiple income sources.
+- ✅ **Data Visualization:** Visualize financial data through charts and graphs.
+- ✅ **Secure Data Storage:** Utilizes MongoDB to securely store user information and transactions.
 
----
+## 📁 Project Structure
 
-## Tech Stack
+The project is organized into two main directories:
 
-| Layer               | Technology                |
-|--------------------|---------------------|
-| Frontend            | React.js            |
-| Backend              | Node.js, Express.js   |
-| Database           | MongoDB              |
-| Styling                 | CSS                           |
+### 📌 Backend
+Path: `Backend/`
 
----
+- **app.js:** Main entry point for the backend application.
+- **Controllers:** Houses business logic for users and transactions.
+- **Databases:** Handles MongoDB connection configurations.
+- **Models:** Defines data schemas for users and transactions.
+- **Routers:** Manages API routes.
+- **package.json:** Maintains backend dependencies and scripts.
 
-## Project Structure
+### 💻 Frontend
+Path: `Frontend/`
+
+- **src:** Contains the core React.js source code.
+  - **Pages:** Includes pages like Login, Register, Home, etc.
+  - **Components:** Modular and reusable UI components.
+  - **Assets:** Static files like logos, images, and icons.
+- **public:** Houses static files and the main HTML template.
+- **package.json:** Lists frontend dependencies and scripts.
+
+### 📜 Folder Structure
 
 ```
 personal_finance_manager-main/
@@ -45,85 +56,84 @@ personal_finance_manager-main/
 └── README.md                # Project Documentation
 ```
 
----
+## 🛠 Installation
 
-## Installation
+### Prerequisites
 
-1. Clone the repository:
+Ensure you have the following installed:
+- **Node.js**
+- **MongoDB**
 
-    ```bash
-    git clone https://github.com/your-username/personal-finance-manager.git
-    ```
-
-2. Navigate into the project folder:
-
-    ```bash
-    cd personal-finance-manager-main
-    ```
-
-3. Install backend dependencies:
-
-    ```bash
-    npm install
-    ```
-
-4. Navigate into the frontend folder (`src` or where your client code is, if applicable) and install frontend dependencies:
-
-    ```bash
-    cd src
-    npm install
-    ```
-
----
-
-## Environment Variables
-
-Create a `.env` file in the root directory and specify:
-
-```
-MONGO_URI=your_mongo_connection_string
-PORT=5000
-JWT_SECRET=your_secret_key
-```
-
----
-
-## Running the Application
-
-To start the **backend server**:
+### Clone the Repository
 
 ```bash
-npm run server
+git clone <repository-url>
+cd Personal-Finance-Manager-main
 ```
 
-To start the **React frontend**:
+### Install Backend Dependencies
 
 ```bash
-cd src
+cd Backend
+npm install
+```
+
+### Install Frontend Dependencies
+
+```bash
+cd ../Frontend
+npm install
+```
+
+## ▶️ Running the Application
+
+### Start the Backend Server
+
+```bash
+cd Backend
 npm start
 ```
 
----
+### Start the Frontend Server
 
-## API Endpoints
+```bash
+cd ../Frontend
+npm start
+```
+
+The application will be accessible at:
+- **Frontend:** [http://localhost:3000](http://localhost:3000)
+- **Backend API:** [http://localhost:5000](http://localhost:5000)
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the `Backend/` directory with the following content:
+
+```
+MONGO_URI=<your-mongodb-connection-string>
+JWT_SECRET=<your-jwt-secret>
+```
+
+## 📊 API Endpoints
 
 | Method | Endpoint | Description |
-| --- | --- | --- |
-| POST | /api/users/register | Register a new user |
-| POST | /api/users/login | Login user |
-| GET | /api/transactions | Get all transactions |
-| POST | /api/transactions | Add new transaction |
-| PUT | /api/transactions/:id | Update a transaction |
-| DELETE | /api/transactions/:id | Delete a transaction |
+|--------|----------|-------------|
+| **POST** | `/api/users/register` | Register a new user |
+| **POST** | `/api/users/login` | Login a user |
+| **GET** | `/api/transactions` | Retrieve all transactions |
+| **POST** | `/api/transactions` | Add a new transaction |
+| **PUT** | `/api/transactions/:id` | Update a transaction by ID |
+| **DELETE** | `/api/transactions/:id` | Delete a transaction by ID |
 
----
+## 📜 License
 
-## Screenshots (Optional)
+This project is licensed under the [MIT License](LICENSE).
 
-You can add screenshots here to show off your app interface.
+## 🤝 Contributing
 
----
+Contributions are highly welcomed! If you encounter any bugs, have feature requests, or want to enhance functionality, feel free to open an issue or submit a pull request.
 
-## License
+## 👨‍💻 Author
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Developed and maintained by **Ajay Padghan**. For any inquiries or support, you can reach out via GitHub or email.
+
